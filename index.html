@@ -1,411 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Tawoon Chemicals | Products</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Tawoon Chemicals | Industrial Chemical Supplier UAE</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-/* =========================
-   ROOT COLORS
-========================= */
-
-:root{
-  --navy:#0d1b2a;
-  --teal:#0ea5a4;
-  --teal-dark:#0b7c7a;
-  --gold:#ffb703;
-  --bg:#f4f7fa;
-  --card:#ffffff;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --shadow:0 10px 30px rgba(0,0,0,0.08);
-  --radius:18px;
-}
-
-*{box-sizing:border-box;margin:0;padding:0;}
-
-body{
-  font-family:'Outfit',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-  background:var(--navy);
-  padding:20px 40px;
-  display:flex;
-  align-items:center;
-  box-shadow:0 6px 24px rgba(0,0,0,0.15);
-}
-
-.header-brand{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.header-logo{
-  width:50px;
-  height:50px;
-}
-
-.header-titles h1{
-  color:var(--gold);
-  font-size:1.6rem;
-  margin-bottom:4px;
-}
-
-.header-titles p{
-  color:#e0e1dd;
-  font-size:0.9rem;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  background:linear-gradient(135deg,var(--teal),#14b8a6);
-  color:white;
-  text-align:center;
-  padding:70px 20px;
-  border-radius:0 0 40px 40px;
-  margin-bottom:50px;
-}
-
-.hero h2{
-  font-size:2.5rem;
-  margin-bottom:15px;
-}
-
-.hero p{
-  font-size:1.1rem;
-  opacity:0.9;
-  max-width:600px;
-  margin:auto;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-
-.main-content{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px 50px;
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:40px;
-}
-
-/* =========================
-   PRODUCT GRID
-========================= */
-
-.products-grid-wrap{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:28px;
-}
-
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:22px 18px;
-  text-align:center;
-  transition:all 0.3s ease;
-  border:1px solid #eef2f5;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 18px 40px rgba(14,165,164,0.25);
-  border-color:var(--teal);
-}
-
-.card-image-wrap{
-  height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:15px;
-}
-
-.card img{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-  border-radius:12px;
-  background:#fff;
-  padding:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-.card-title{
-  font-size:1.1rem;
-  font-weight:600;
-  color:var(--teal-dark);
-  margin-bottom:8px;
-}
-
-.card-desc{
-  font-size:0.9rem;
-  color:var(--muted);
-}
-
-/* =========================
-   SIDEBAR
-========================= */
-
-.sidebar-card{
-  background:white;
-  border-radius:var(--radius);
-  padding:30px 22px;
-  box-shadow:var(--shadow);
-  height:fit-content;
-}
-
-.sidebar-logo-wrap{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.about-image{
-  width:80px;
-}
-
-.sidebar-title{
-  font-size:1.1rem;
-  text-align:center;
-  margin-bottom:20px;
-  color:var(--teal-dark);
-}
-
-.sidebar-contact{
-  list-style:none;
-}
-
-.sidebar-contact li{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:15px;
-  font-size:0.95rem;
-}
-
-.sidebar-contact i{
-  color:var(--teal);
-}
-
-.sidebar-contact a{
-  text-decoration:none;
-  color:var(--text);
-}
-
-.sidebar-contact a:hover{
-  color:var(--teal);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:var(--navy);
-  color:#e0e1dd;
-  text-align:center;
-  padding:18px;
-  font-size:14px;
-  margin-top:40px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:1024px){
-  .main-content{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:768px){
-
-  header{
-    padding:15px 20px;
-  }
-
-  .hero h2{
-    font-size:1.8rem;
-  }
-
-  .products-grid-wrap{
-    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  }
-
-}
-
-@media(max-width:480px){
-
-  .hero{
-    padding:50px 15px;
-  }
-
-  .hero h2{
-    font-size:1.5rem;
-  }
-
-  .products-grid-wrap{
-    grid-template-columns:1fr;
-  }
-
-}
-
-</style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
   <div class="header-brand">
-    <img src="assets/logo-mark.svg" class="header-logo">
+    <img src="assets/logo-mark.svg" class="header-logo" alt="Al Tawoon Chemicals Logo">
     <div class="header-titles">
       <h1>Al Tawoon Chemicals FZE</h1>
-      <p>Quality chemical products & solutions</p>
+      <p>Industrial Chemical Solutions | Sharjah, UAE</p>
     </div>
   </div>
+
+ <nav>
+  <ul class="nav-links">
+    <li><a href="#products" data-translate="nav_products">Products</a></li>
+    <li><a href="#about" data-translate="nav_about">About</a></li>
+    <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+
+    <!-- Language -->
+    <li class="language-switcher">
+      <select id="language">
+        <option value="en" selected>EN</option>
+        <option value="sw">SW</option>
+      </select>
+    </li>
+  </ul>
+
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <h2>Our Chemical Products</h2>
-  <p>Browse our extensive catalogue of high-quality chemical solutions.</p>
+  <h2 data-translate="hero_title">
+    Premium Quality Chemical Products
+  </h2>
+
+  <p data-translate="hero_desc">
+    Reliable supply for industrial, cleaning, and manufacturing sectors across GCC.
+  </p>
+
+  <a href="#contact" class="cta-btn" data-translate="hero_btn">
+    Request a Quote
+  </a>
 </section>
 
-<div class="main-content">
+<!-- ================= PRODUCTS ================= -->
+<section id="products" class="products-grid-wrap">
 
-  <div class="products-grid-wrap">
-
-    <!-- Product cards generated from Products.csv -->
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES</div><div class="card-desc">Packing: 220 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES</div><div class="card-desc">Packing: 170 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES</div><div class="card-desc">Packing: 170 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES</div><div class="card-desc">Packing: 225 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES GODREJ</div><div class="card-desc">Packing: 240 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES GALAXY</div><div class="card-desc">Packing: 240 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLES BASF</div><div class="card-desc">Packing: 235 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CAPB</div><div class="card-desc">Packing: 235 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CDEA</div><div class="card-desc">Packing: 200 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CDEA</div><div class="card-desc">Packing: 210 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">LABSA 96%</div><div class="card-desc">Packing: 250 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">LABSA 90%</div><div class="card-desc">Packing: 220 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">BKC 80% DMBA</div><div class="card-desc">Packing: 200 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PEARLISING AGENT</div><div class="card-desc">Packing: 150 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PEARLISING AGENT</div><div class="card-desc">Packing: 150 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">GLYCERINE</div><div class="card-desc">Packing: 250 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">GLYCERINE</div><div class="card-desc">Packing: 250 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">IPA ( PURE)</div><div class="card-desc">Packing: 160 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">IPA ( PURE)</div><div class="card-desc">Packing: 160 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">IPA ( TECH)</div><div class="card-desc">Packing: 160 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PINE OIL 85%</div><div class="card-desc">Packing: 180 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">DCMX FLAKES</div><div class="card-desc">Packing: 20 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PCMX FLAKES</div><div class="card-desc">Packing: 25 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CMC FOOD GRADE</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">NP9</div><div class="card-desc">Packing: 215 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERCHLOROETHYLINE</div><div class="card-desc">Packing: 300 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">TSP</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">TSP (FOOD)</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">POLY ALYMINUM CHLORIDE</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SODIUM SULFATE</div><div class="card-desc">Packing: 50 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SODIUM SULPHITE</div><div class="card-desc">Packing: 50 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">STPP</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CASTOR OIL PURE</div><div class="card-desc">Packing: 200 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CASTOROIL (TECH)</div><div class="card-desc">Packing: 225 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CASTOR OIL SOAP 45%</div><div class="card-desc">Packing: 200 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CASTOR OIL SOAP 35%</div><div class="card-desc">Packing: 200 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">METHANOL</div><div class="card-desc">Packing: 160 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ETHANOL PURE</div><div class="card-desc">Packing: 165 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ETHANOL PURE</div><div class="card-desc">Packing: 800 KG IBC</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ETHYLOL</div><div class="card-desc">Packing: 165 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CALCIUM HYPOCHLORITE</div><div class="card-desc">Packing: 45 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SLS NEEDLES</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">AOS POWDER</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">N-BUTONOL</div><div class="card-desc">Packing: 160 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">EDTA</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PHOSPORIC ACID</div><div class="card-desc">Packing: 35 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">METHOXY PROPONAL</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">METHOXY PROPONAL</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">DOWANOL PM</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">BUTYL GLYCOL</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">BUTYL ACETATE</div><div class="card-desc">Packing: 185 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">MPG</div><div class="card-desc">Packing: 215 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ETHYL ACETATE</div><div class="card-desc">Packing: 180 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ETHYL ACETATE</div><div class="card-desc">Packing: 185 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CAUSTIC SODA PRILLS</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CITRIC ACID</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CAUSTIC SODA FLAKES</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">FORMALDEHYDE</div><div class="card-desc">Packing: 225 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SODIUM PERBORATE</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">FABRIQ SOFTNER CONCENTRATE</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">CYCLOHEXANONE</div><div class="card-desc">Packing: 190 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ACETIC ACID Lotte</div><div class="card-desc">Packing: 30 KG CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">ACETIC ACID Local</div><div class="card-desc">Packing: 30 KG CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SODA ASH LIGHT</div><div class="card-desc">Packing: 50 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">MAIZE STARCH</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">SODIUM GLUCONATE</div><div class="card-desc">Packing: 25 KG BAG</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">METHYLENE CHLORIDE</div><div class="card-desc">Packing: 270 KG DRUM</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR PINK</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR YELLOW</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (FLUROCENT YELLOW)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (BROWN)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (BLUE)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (GREEN)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (ORANGE)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (RED)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (SUNSET YELLOW)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (GREEN)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (CARAMEL BROWN)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (BRILLIANT BLUE)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (FLUROSCENT GREEN)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (KENCID RED)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (LAVENDER BLUE)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">COLOUR (BLACK)</div><div class="card-desc">Packing: 25 KG CTN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME SUNNY LEMON</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME PINE</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME OUDH</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME BAKHOUR</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME GREEN APPLE</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME CITRUSPINE</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME LAVENDER</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-    <div class="card"><div class="card-image-wrap"><img src="assets/drum.svg"></div><div class="card-title">PERFUME PEACH</div><div class="card-desc">Packing: 25 KG J CAN</div></div>
-
+  <div class="card">
+    <div class="card-title">SLES</div>
+    <ul class="card-desc-list">
+      <li>220 KG DRUM – China</li>
+      <li>170 KG DRUM – GCC</li>
+      <li>225 KG DRUM – Export</li>
+    </ul>
   </div>
 
-  <aside class="sidebar-card">
-    <h2 class="sidebar-title">Contact Us</h2>
-    <div style="margin-bottom:18px; color:#0b7c7a; font-weight:600; font-size:1.05rem; text-align:center;">Al Tawoon Chemicals FZE</div>
-    <ul class="sidebar-contact">
-      <li><i class="fa-solid fa-phone"></i> <a href="tel:+97165232269">+971 6 5232269</a></li>
-      <li><i class="fa-brands fa-whatsapp"></i> <a href="tel:+971504585841">+971 504585841</a></li>
-      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:bimalaltawoon@gmail.com">bimalaltawoon@gmail.com</a></li>
-      <li><i class="fa-solid fa-location-dot"></i> E 2, B 126, G 10, Hamriyah Freezone, Sharjah, UAE</li>
+  <div class="card">
+    <div class="card-title">SLES GODREJ</div>
+    <ul class="card-desc-list">
+      <li>240 KG DRUM – India</li>
     </ul>
-  </aside>
+  </div>
 
-</div>
+  <div class="card">
+    <div class="card-title">LABSA 96%</div>
+    <ul class="card-desc-list">
+      <li>250 KG DRUM</li>
+    </ul>
+  </div>
 
+  <div class="card">
+    <div class="card-title">GLYCERINE</div>
+    <ul class="card-desc-list">
+      <li>250 KG DRUM</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= ABOUT & CONTACT ================= -->
+<section class="info-sections">
+
+  <div id="about" class="about">
+    <h2 data-translate="about_title">About Us</h2>
+
+    <p data-translate="about_desc1">
+      Al Tawoon Chemicals FZE is a trusted industrial chemical supplier based in Hamriyah Free Zone, Sharjah, UAE.
+    </p>
+
+    <p data-translate="about_desc2">
+      Our mission is to deliver consistent quality, competitive pricing, and reliable service.
+    </p>
+  </div>
+
+  <div id="contact" class="contact">
+    <h2 data-translate="contact_title">Contact Us</h2>
+
+    <ul>
+      <li><i class="fa-solid fa-phone"></i> <a href="tel:+97165232269">+971 6 5232269</a></li>
+      <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/971504585841">+971 504585841</a></li>
+      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:bimalaltawoon@gmail.com">bimalaltawoon@gmail.com</a></li>
+      <li><i class="fa-solid fa-location-dot"></i> Hamriyah Free Zone, Sharjah, UAE</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  © 2026 <span style="color:var(--gold);font-weight:600;">Al Tawoon Chemicals FZE</span> | All Rights Reserved
+
+  <div class="footer-bottom">
+    © 2026 <span>Al Tawoon Chemicals FZE</span> |
+    <span data-translate="footer_rights">All Rights Reserved</span>
+  </div>
+
 </footer>
+
+<script src="scripts/scripts.js"></script>
 
 </body>
 </html>
