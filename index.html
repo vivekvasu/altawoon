@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -26,118 +26,143 @@
     </div>
   </div>
 
- <nav>
-  <ul class="nav-links">
-    <li><a href="#products" data-translate="nav_products">Products</a></li>
-    <li><a href="#about" data-translate="nav_about">About</a></li>
-    <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about" data-translate="nav_about">About</a></li>
+      <li><a href="#products" data-translate="nav_products">Products</a></li>
+      <li class="language-switcher">
+        <select id="language">
+          <option value="en" selected>EN</option>
+          <option value="sw">SW</option>
+        </select>
+      </li>
+    </ul>
 
-    <!-- Language -->
-    <li class="language-switcher">
-      <select id="language">
-        <option value="en" selected>EN</option>
-        <option value="sw">SW</option>
-      </select>
-    </li>
-  </ul>
-
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-  <h2 data-translate="hero_title">
-    Premium Quality Chemical Products
-  </h2>
-
+<section class="hero fade-in">
+  <h2 data-translate="hero_title">Premium Industrial Chemicals for Every Need</h2>
   <p data-translate="hero_desc">
-    Reliable supply for industrial, cleaning, and manufacturing sectors across GCC.
+    Trusted supplier across GCC for industrial, manufacturing, and cleaning sectors—delivering quality, reliability, and excellence.
   </p>
+  <a href="#footer" class="cta-btn" data-translate="hero_btn">Get Your Quote Today</a>
+</section>
 
-  <a href="#contact" class="cta-btn" data-translate="hero_btn">
-    Request a Quote
-  </a>
+<!-- ================= ABOUT US (TILES) ================= -->
+<section id="about" class="about fade-in">
+  <h2 class="section-title" data-translate="about_title">About Us</h2>
+  <div class="about-tiles">
+
+    <!-- Overview Tile -->
+    <div class="about-tile">
+      <h3 data-translate="about_overview_title">Overview</h3>
+      <p data-translate="about_desc1">Al Tawoon Chemicals FZE is a leading industrial chemical supplier, strategically located in Hamriyah Free Zone, Sharjah, UAE.</p>
+      <p data-translate="about_para1_detailed">With over 25 years of expertise, we deliver superior chemical solutions backed by personalized service and expert technical support.</p>
+      <p data-translate="about_para2_detailed">We specialize in premium solutions for the detergent and cosmetic industries, tailored to meet the needs of clients across Africa and the Middle East.</p>
+    </div>
+
+    <!-- Why Choose Us Tile -->
+    <div class="about-tile">
+      <h3 data-translate="about_why_title_detailed">Why Choose Us?</h3>
+      <ul>
+        <li data-translate="about_why1_detailed"><strong>Unmatched Quality:</strong> Every product meets rigorous standards for performance and reliability.</li>
+        <li data-translate="about_why2_detailed"><strong>Industry Expertise:</strong> Deep knowledge of detergent and cosmetic manufacturing processes.</li>
+        <li data-translate="about_why3_detailed"><strong>Proven Experience & Support:</strong> 25+ years guiding clients with technical expertise and professional consultation.</li>
+      </ul>
+    </div>
+
+    <!-- Services & Global Reach Tile -->
+    <div class="about-tile">
+      <h3 data-translate="about_services_title_detailed">Our Services & Global Reach</h3>
+      <ul>
+        <li data-translate="about_service1_detailed">Bulk supply of premium chemical raw materials</li>
+        <li data-translate="about_service2_detailed">Tailored solutions for specific industry requirements</li>
+        <li data-translate="about_service3_detailed">Market-focused logistics for Africa and the Middle East</li>
+      </ul>
+      <p data-translate="about_global_desc_detailed">Serving clients across Africa and the Middle East, we provide reliable supply chains and tailored logistics to ensure your business runs smoothly.</p>
+    </div>
+
+    <!-- Product Portfolio Tile -->
+    <div class="about-tile">
+      <h3 data-translate="about_products_title_detailed">Product Portfolio</h3>
+      <ul>
+        <li data-translate="about_product1_detailed"><strong>Detergent Manufacturing:</strong> Surfactants, builders, and performance additives</li>
+        <li data-translate="about_product2_detailed"><strong>Cosmetic Production:</strong> Specialty ingredients for skincare and personal care</li>
+        <li data-translate="about_product3_detailed">(Detailed product list available upon request)</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 <!-- ================= PRODUCTS ================= -->
-<section id="products" class="products-grid-wrap">
-
-  <div class="card">
-    <div class="card-title">SLES</div>
-    <ul class="card-desc-list">
-      <li>220 KG DRUM – China</li>
-      <li>170 KG DRUM – GCC</li>
-      <li>225 KG DRUM – Export</li>
-    </ul>
+<section id="products" class="products-grid-wrap fade-in">
+  <h2 class="section-title">Our Products</h2>
+  <div class="products-grid">
+    <div class="card">
+      <div class="card-title">SLES</div>
+      <ul class="card-desc-list">
+        <li>220 KG DRUM – China</li>
+        <li>170 KG DRUM – GCC</li>
+        <li>225 KG DRUM – Export</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">SLES GODREJ</div>
+      <ul class="card-desc-list">
+        <li>240 KG DRUM – India</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">LABSA 96%</div>
+      <ul class="card-desc-list">
+        <li>250 KG DRUM</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">GLYCERINE</div>
+      <ul class="card-desc-list">
+        <li>250 KG DRUM</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="card">
-    <div class="card-title">SLES GODREJ</div>
-    <ul class="card-desc-list">
-      <li>240 KG DRUM – India</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <div class="card-title">LABSA 96%</div>
-    <ul class="card-desc-list">
-      <li>250 KG DRUM</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <div class="card-title">GLYCERINE</div>
-    <ul class="card-desc-list">
-      <li>250 KG DRUM</li>
-    </ul>
-  </div>
-
 </section>
 
-<!-- ================= ABOUT & CONTACT ================= -->
-<section class="info-sections">
-
-  <div id="about" class="about">
-    <h2 data-translate="about_title">About Us</h2>
-
-    <p data-translate="about_desc1">
-      Al Tawoon Chemicals FZE is a trusted industrial chemical supplier based in Hamriyah Free Zone, Sharjah, UAE.
-    </p>
-
-    <p data-translate="about_desc2">
-      Our mission is to deliver consistent quality, competitive pricing, and reliable service.
-    </p>
+<!-- ================= FOOTER WITH CONTACT ================= -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3 data-translate="footer_about_title">Contact Us</h3>
+      <ul>
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+97165232269">+971 6 5232269</a></li>
+        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/971504585841" target="_blank">+971 504585841</a></li>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:bimalaltawoon@gmail.com">bimalaltawoon@gmail.com</a></li>
+        <li><i class="fa-solid fa-location-dot"></i> Hamriyah Free Zone, Sharjah, UAE</li>
+      </ul>
+    </div>
   </div>
-
-  <div id="contact" class="contact">
-    <h2 data-translate="contact_title">Contact Us</h2>
-
-    <ul>
-      <li><i class="fa-solid fa-phone"></i> <a href="tel:+97165232269">+971 6 5232269</a></li>
-      <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/971504585841">+971 504585841</a></li>
-      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:bimalaltawoon@gmail.com">bimalaltawoon@gmail.com</a></li>
-      <li><i class="fa-solid fa-location-dot"></i> Hamriyah Free Zone, Sharjah, UAE</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
 
   <div class="footer-bottom">
-    © 2026 <span>Al Tawoon Chemicals FZE</span> |
-    <span data-translate="footer_rights">All Rights Reserved</span>
+    © 2026 <span>Al Tawoon Chemicals FZE</span> | <span data-translate="footer_rights">All Rights Reserved</span>
   </div>
-
 </footer>
 
-<script src="scripts/scripts.js"></script>
+<!-- ================= WHATSAPP FLOATING ICON ================= -->
+<a href="https://wa.me/971504585841" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="scripts/menu.js"></script>
+<script src="scripts/translate.js"></script>
+<script src="scripts/scroll-anim.js"></script>
 
 </body>
 </html>
