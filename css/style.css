@@ -229,12 +229,14 @@ nav {
   font-weight: 600;
   color: #0d1b2a;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .card-desc-list {
   display: block;                                   /* always visible */
   margin-top: 10px;
   padding-left: 15px;
+  text-align: center;
 }
 
 .card-desc-list li {
@@ -347,4 +349,5 @@ footer ul li a:hover {
   .hero {
     padding: 60px 20px;
   }
+
 }
