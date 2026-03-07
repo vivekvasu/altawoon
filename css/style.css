@@ -135,7 +135,7 @@ nav {
 }
 
 /* ================================
-   ABOUT US TILES
+   ABOUT US / SERVICES TILES
 ================================ */
 .section-title {
   text-align: center;
@@ -145,7 +145,8 @@ nav {
   font-weight: 600;
 }
 
-.about-tiles {
+.about-tiles,
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -153,19 +154,50 @@ nav {
   margin: 0 auto 50px;
 }
 
-.about-tile {
-  background: #fff;
-  padding: 25px;
+/* All tiles appear hovered by default */
+.about-tile,
+.services-card {
+  background-color: #f0f0f0;                       /* hover effect default */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);         /* lifted shadow */
+  transform: translateY(-8px);                      /* lifted effect */
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border: 1px solid #08998a;                       /* hover border as default */
+  transition: none;                                 /* no hover animation */
+  cursor: pointer;
 }
 
-.about-tile h3 {
+.about-tile h3,
+.services-card .card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  color: #0d1b2a;
+}
+
+/* Child content always visible */
+.about-tile .card-desc-list,
+.services-card .card-desc-list {
+  display: block;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.about-tile .card-desc-list li,
+.services-card .card-desc-list li {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.about-tile .card-desc-list li:last-child,
+.services-card .card-desc-list li:last-child {
+  border-bottom: none;
 }
 
 /* ================================
@@ -182,18 +214,14 @@ nav {
 }
 
 .card {
-  background: #fff;
-  padding: 25px;
+  background-color: #f0f0f0;                       /* hover effect default */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);         /* lifted shadow */
+  transform: translateY(-8px);                      /* lifted effect */
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: 0.3s;
-  border: 1px solid #eee;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(8,153,138,0.25);
-  border-color: #08998a;
+  padding: 25px;
+  border: 1px solid #08998a;                       /* hover border as default */
+  transition: none;                                 /* no hover animation */
+  cursor: pointer;
 }
 
 .card-title {
@@ -203,14 +231,25 @@ nav {
   margin-bottom: 10px;
 }
 
+.card-desc-list {
+  display: block;                                   /* always visible */
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
 .card-desc-list li {
+  margin: 5px 0;
   font-size: 0.9rem;
-  padding: 5px 0;
+  color: #555;
   border-bottom: 1px solid #eee;
 }
 
 .card-desc-list li:last-child {
   border-bottom: none;
+}
+
+.card-desc-list li::marker {
+  color: #08998a;
 }
 
 /* ================================
@@ -263,12 +302,12 @@ footer ul li a:hover {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 60px;            /* fixed width */
-  height: 60px;           /* fixed height to make a perfect circle */
+  width: 60px;
+  height: 60px;
   background-color: #25d366;
   color: #fff;
-  border-radius: 50%;     /* makes it perfectly round */
-  display: flex;          /* center icon horizontally and vertically */
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
@@ -276,11 +315,6 @@ footer ul li a:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.2);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* ================================
@@ -313,5 +347,4 @@ footer ul li a:hover {
   .hero {
     padding: 60px 20px;
   }
-
 }
