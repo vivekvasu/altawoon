@@ -103,7 +103,7 @@ const translations = {
 
     contact_title: "اتصل بنا",
     footer_rights: "جميع الحقوق محفوظة"
-  },
+  }
 };
 
 // ===============================
@@ -117,3 +117,4 @@ document.getElementById("language").addEventListener("change", function() {
   });
 
 });
+
