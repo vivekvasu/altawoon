@@ -7,7 +7,7 @@ const translations = {
 
     // Hero
     hero_title: "Premium Industrial Raw Material Chemicals for Every Need",
-    hero_desc: "Your most trusted business partner.",
+    hero_desc: "Your most trusted business partner",
     hero_btn: "Get Your Quote Today",
 
     // About
@@ -43,7 +43,7 @@ const translations = {
     nav_contact: "Contact",
 
     hero_title: "Produits chimiques industriels premium pour tous les besoins",
-    hero_desc: "Votre partenaire commercial de confiance.",
+    hero_desc: "Votre partenaire commercial de confiance",
     hero_btn: "Obtenez votre devis aujourd'hui",
 
     about_title: "À propos de nous",
@@ -78,7 +78,7 @@ const translations = {
     nav_contact: "اتصل بنا",
 
     hero_title: "كيماويات صناعية متميزة لكل الاحتياجات",
-    hero_desc: "شريكك التجاري الأكثر ثقة.",
+    hero_desc: "شريكك التجاري الأكثر ثقة",
     hero_btn: "احصل على عرض سعر اليوم",
 
     about_title: "من نحن",
@@ -107,3 +107,4 @@ const translations = {
     footer_rights: "جميع الحقوق محفوظة"
   }
 };
+
